@@ -1,0 +1,13 @@
+{
+  "builds": [
+    {
+      "src": "app/**/*.{js,jsx}",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/(.*)", "dest": "/" }
+  ],
+  "gitignore": ["backend/", "chroma_db/", "requirements.txt", "scripts/"]
+}
